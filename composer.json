@@ -1,0 +1,14 @@
+{
+  "name": "batyukovstudio/image-object",
+  "description": "image-object",
+  "autoload": {
+    "psr-4": {
+      "batyukovstudio\\image-object\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^8.0.2"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
