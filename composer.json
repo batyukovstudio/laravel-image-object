@@ -1,9 +1,9 @@
 {
-  "name": "batyukovstudio/image-object",
-  "description": "image-object",
+  "name": "batyukovstudio/laravel-image-object",
+  "description": "laravel-image-object",
   "autoload": {
     "psr-4": {
-      "batyukovstudio\\image-object\\": "src/"
+      "batyukovstudio\\laravel-image-object\\": "src/"
     }
   },
   "require": {
