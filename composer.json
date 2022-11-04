@@ -7,6 +7,7 @@
     }
   },
   "require": {
+    "laravel/framework": "^9.2",
     "php": "^8.0.2"
   },
   "minimum-stability": "dev",
