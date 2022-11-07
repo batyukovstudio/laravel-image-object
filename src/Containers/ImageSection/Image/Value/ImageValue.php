@@ -11,11 +11,14 @@ class ImageValue extends ParentValue
 
     public ImageConversionsCollection $imageConversionsCollection;
 
+    public ImageConversionsCollection $imageGalleryConversionsCollection;
+
     public bool $isWithGallery;
 
     public function __construct()
     {
         $this->imageConversionsCollection = new ImageConversionsCollection();
+        $this->imageGalleryConversionsCollection = new ImageConversionsCollection();
     }
 
     /**
@@ -71,5 +74,24 @@ class ImageValue extends ParentValue
     {
         return $this->isWithGallery;
     }
+
+    /**
+     * @return imageConversionsCollection
+     */
+    public function getImageGalleryConversionsCollection(): imageConversionsCollection
+    {
+        return $this->imageGalleryConversionsCollection;
+    }
+
+    /**
+     * @param imageConversionsCollection $imageGalleryConversionsCollection
+     * @return $this
+     */
+    public function setImageGalleryConversionsCollection(imageConversionsCollection $imageGalleryConversionsCollection): self
+    {
+        $this->imageGalleryConversionsCollection = $imageGalleryConversionsCollection;
+        return $this;
+    }
+
 
 }
