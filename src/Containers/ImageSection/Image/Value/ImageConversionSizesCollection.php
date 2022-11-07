@@ -1,9 +1,9 @@
 <?php
 
-namespace BatyukovStudio\ImageObject\Containers\ImageSection\Image\Value;
+namespace BatyukovStudio\LaravelImageObject\Containers\ImageSection\Image\Value;
 
-use BatyukovStudio\ImageObject\Ship\Parents\Value\Collection as ParentCollection;
-use BatyukovStudio\ImageObject\Ship\Parents\Value\Value;
+use BatyukovStudio\LaravelImageObject\Ship\Parents\Value\Collection as ParentCollection;
+use BatyukovStudio\LaravelImageObject\Ship\Parents\Value\Value;
 
 
 class ImageConversionSizesCollection extends ParentCollection
