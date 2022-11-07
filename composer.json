@@ -3,12 +3,12 @@
   "description": "laravel-image-object",
   "autoload": {
     "psr-4": {
-      "batyukovstudio\\laravel-image-object\\": "src/"
+      "BatyukovStudio\\LaravelImageObject\\": "src"
     }
   },
   "require": {
     "laravel/framework": "^9.2",
-    "php": "^8.0.2"
+    "php": "^8.0"
   },
   "minimum-stability": "dev",
   "prefer-stable": true
