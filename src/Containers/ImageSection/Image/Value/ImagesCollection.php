@@ -8,10 +8,4 @@ use BatyukovStudio\LaravelImageObject\Ship\Parents\Value\Value;
 class ImagesCollection extends ParentCollection
 {
 
-    protected static function prepareItem(mixed $item): Value
-    {
-        $value = ImageValue::run();
-        return $value;
-    }
-
 }

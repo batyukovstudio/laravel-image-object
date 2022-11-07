@@ -8,9 +8,5 @@ use BatyukovStudio\LaravelImageObject\Ship\Parents\Value\Value;
 
 class ImageConversionSizesCollection extends ParentCollection
 {
-    protected static function prepareItem(mixed $item): Value
-    {
-        $value = ImageConversionSizeValue::run();
-        return $value;
-    }
+
 }
