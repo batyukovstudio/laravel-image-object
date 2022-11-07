@@ -11,11 +11,11 @@ class ImageConversionValue extends ParentValue
 
     public bool $isOriginal;
 
-    public imageConversionSizesCollection $imageConversionSizesCollection;
+    public ImageConversionSizesCollection $imageConversionSizesCollection;
 
     public function __construct()
     {
-        $this->imageConversionSizesCollection = new imageConversionSizesCollection();
+        $this->imageConversionSizesCollection = new ImageConversionSizesCollection();
     }
 
     /**
@@ -37,18 +37,18 @@ class ImageConversionValue extends ParentValue
     }
 
     /**
-     * @return imageConversionSizesCollection
+     * @return ImageConversionSizesCollection
      */
-    public function getImageConversionSizesCollection(): imageConversionSizesCollection
+    public function getImageConversionSizesCollection(): ImageConversionSizesCollection
     {
         return $this->imageConversionSizesCollection;
     }
 
     /**
-     * @param imageConversionSizesCollection $imageConversionSizesCollection
+     * @param ImageConversionSizesCollection $imageConversionSizesCollection
      * @return $this
      */
-    public function setImageConversionSizesCollection(imageConversionSizesCollection $imageConversionSizesCollection): self
+    public function setImageConversionSizesCollection(ImageConversionSizesCollection $imageConversionSizesCollection): self
     {
         $this->imageConversionSizesCollection = $imageConversionSizesCollection;
         return $this;

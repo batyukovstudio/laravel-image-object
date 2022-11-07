@@ -7,41 +7,41 @@ use BatyukovStudio\LaravelImageObject\Ship\Parents\Value\Value as ParentValue;
 class ImageConversionSizeValue extends ParentValue
 {
 
-    public string $width;
-    public string $height;
+    public int $width;
+    public ?int $height;
     public string $src;
 
     /**
-     * @return string
+     * @return int
      */
-    public function getWidth(): string
+    public function getWidth(): int
     {
         return $this->width;
     }
 
     /**
-     * @param string $width
+     * @param int $width
      * @return $this
      */
-    public function setWidth(string $width): self
+    public function setWidth(int $width): self
     {
         $this->width = $width;
         return $this;
     }
 
     /**
-     * @return string
+     * @return int|null
      */
-    public function getHeight(): string
+    public function getHeight(): ?int
     {
         return $this->height;
     }
 
     /**
-     * @param string $height
+     * @param int|null $height
      * @return $this
      */
-    public function setHeight(string $height): self
+    public function setHeight(?int $height): self
     {
         $this->height = $height;
         return $this;
@@ -64,7 +64,6 @@ class ImageConversionSizeValue extends ParentValue
         $this->src = $src;
         return $this;
     }
-
 
 
 }

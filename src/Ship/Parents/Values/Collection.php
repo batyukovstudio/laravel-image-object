@@ -2,14 +2,15 @@
 
 namespace BatyukovStudio\LaravelImageObject\Ship\Parents\Value;
 
+use BatyukovStudio\LaravelImageObject\Ship\Parents\Transformers\ImageTransformer;
 use Illuminate\Contracts\Support\Arrayable;
 
 abstract class Collection extends \Illuminate\Support\Collection
 {
     /**
-     * @return array|mixed[]
+     * @return array
      */
-    public function toArray()
+    public function toArray(): array
     {
         return $this->map(fn($value) => $value->toArray())->all();
     }
@@ -20,15 +21,19 @@ abstract class Collection extends \Illuminate\Support\Collection
      */
     public static function run(Arrayable|array $items): static
     {
-        foreach ($items as $key => $item) {
-            $items[$key] = static::prepareItem($item);
-        }
         return new static($items);
     }
 
     /**
-     * @param mixed $item
-     * @return Value
+     * @param Arrayable|array $items
+     * @param ImageTransformer $imageTransformerClass
+     * @return static
      */
-    abstract protected static function prepareItem(mixed $item): Value;
+    protected static function runWithPreparing(Arrayable|array $items, ImageTransformer $imageTransformerClass): static
+    {
+        foreach ($items as $key => $item) {
+            $items[$key] = app($imageTransformerClass)->transform($item);
+        }
+        return new static($items);
+    }
 }
