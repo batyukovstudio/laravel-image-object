@@ -2,7 +2,7 @@
 
 namespace BatyukovStudio\LaravelImageObject\Containers\ImageSection\Image\Value;
 
-use BatyukovStudio\LaravelImageObject\Ship\Parents\Value\Value as ParentValue;
+use BatyukovStudio\LaravelImageObject\Ship\Parents\Values\Value as ParentValue;
 
 class ImageConversionSizeValue extends ParentValue
 {

@@ -2,7 +2,7 @@
 
 namespace BatyukovStudio\LaravelImageObject\Ship\Parents\Transformers;
 
-use BatyukovStudio\LaravelImageObject\Ship\Parents\Value\Value;
+use BatyukovStudio\LaravelImageObject\Ship\Parents\Values\Value;
 
 abstract class Transformer
 {

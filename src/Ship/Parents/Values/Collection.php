@@ -1,6 +1,6 @@
 <?php
 
-namespace BatyukovStudio\LaravelImageObject\Ship\Parents\Value;
+namespace BatyukovStudio\LaravelImageObject\Ship\Parents\Values;
 
 use Illuminate\Contracts\Support\Arrayable;
 
