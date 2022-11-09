@@ -2,6 +2,7 @@
 
 namespace BatyukovStudio\LaravelImageObject\Ship\Parents\Values;
 
+use BatyukovStudio\LaravelImageObject\Ship\Parents\Transformers\Transformer;
 use Illuminate\Contracts\Support\Arrayable;
 
 abstract class Collection extends \Illuminate\Support\Collection
@@ -17,14 +18,14 @@ abstract class Collection extends \Illuminate\Support\Collection
 
     /**
      * @param Arrayable|array $items
-     * @param string|null $imageTransformerClass
+     * @param Transformer|null $transformer
      * @return static
      */
-    public static function run(Arrayable|array $items, string $imageTransformerClass = null): static
+    public static function run(Arrayable|array $items, Transformer $transformer = null): static
     {
-        if ($imageTransformerClass !== null){
+        if ($transformer !== null){
             foreach ($items as $key => $item) {
-                $items[$key] = $imageTransformerClass::transform($item);
+                $items[$key] = $transformer->transform($item);
             }
         }
 
